@@ -100,6 +100,12 @@ pokeexplorer/
 
 -----
 
+## 🌐 Link do Projeto
+
+A aplicação está publicada e pronta para uso! Você pode acessar o deploy oficial através do link abaixo:
+
+👉 **[https://pokeexplorer-theta.vercel.app/](https://pokeexplorer-theta.vercel.app/)**
+
 ## 👨‍💻 Autor
 
 Desenvolvido com dedicação por **[Blenda Moreira]**.
