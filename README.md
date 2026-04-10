@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔴 PokeExplorer
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-First, run the development server:
+O **PokeExplorer** é um catálogo interativo e dinâmico de Pokémon. A aplicação foi construída do zero para simular um dispositivo de identificação de espécies (Pokédex), consumindo dados em tempo real de uma API pública.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido como requisito avaliativo prático para a disciplina de **Programação e Design para Web II** da **FAETERJ - Unidade Barra Mansa**. 
+
+O principal objetivo tecnológico é demonstrar o domínio dos conceitos fundamentais do framework **Next.js (App Router)**, incluindo:
+- Criação e estruturação de rotas estáticas e dinâmicas.
+- Componentização eficiente de interfaces.
+- Consumo e tratamento de dados de APIs RESTful públicas via requisições `GET`.
+- Estilização customizada avançada sem o uso de frameworks (CSS Puro).
+
+---
+
+## ✨ Funcionalidades e Diferenciais
+
+- **Integração com PokéAPI:** Busca dinâmica de dados oficiais, listando 20 Pokémon na página inicial.
+- **Roteamento Dinâmico (`params`):** Geração de páginas de detalhes únicas para cada Pokémon clicado (ex: `/pokemon/bulbasaur`), exibindo atributos técnicos como peso, altura, tipos e habilidades.
+- **Design Nostálgico e Responsivo:** - Estética visual inspirada nos jogos clássicos, utilizando tipografia *Monospace* (`DejaVu Sans Mono`).
+  - Textura de fundo infinita gerada nativamente com código `SVG` (sem imagens externas de peso).
+  - Cards interativos em formato Grid com animações de elevação (*hover*).
+- **A Experiência Pokédex:** A rota estática `/sobre` foi desenhada usando CSS avançado para simular o layout físico de uma Pokédex clássica da primeira geração, contendo informações do desenvolvedor.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **[Next.js](https://nextjs.org/)** (v14+ utilizando o novo padrão App Router)
+- **React.js** (Biblioteca de renderização)
+- **JavaScript / JSX**
+- **CSS3** (Arquitetura orientada a variáveis CSS, Flexbox e Grid Layout)
+- **[PokéAPI](https://pokeapi.co/)** (Fornecimento de dados)
+
+---
+
+## 🚀 Instruções de Uso (Como rodar localmente)
+
+### Pré-requisitos
+Para rodar este projeto, você precisará ter o [Node.js](https://nodejs.org/) instalado em seu computador.
+
+### Passo a Passo
+
+1. **Clone este repositório para a sua máquina:**
+   ```bash
+   git clone [https://github.com/Blenda-TI/PokeExplorer.git](https://github.com/Blenda-TI/PokeExplorer.git)
+````
+
+2.  **Acesse o diretório do projeto:**
+
+    ```bash
+    cd pokeexplorer
+    ```
+
+3.  **Instale todas as dependências necessárias:**
+
+    ```bash
+    npm install
+    ```
+
+4.  **Inicie o servidor local de desenvolvimento:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Pronto\!** Abra o seu navegador e acesse a URL:
+    👉 **[http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)**
+
+-----
+
+## 📂 Estrutura de Diretórios (Arquitetura)
+
+A organização do código segue as melhores práticas do Next.js:
+
+```text
+pokeexplorer/
+├── app/
+│   ├── globals.css           # Arquivo central de estilo, variáveis e tipografia
+│   ├── layout.jsx            # Estrutura raiz (HTML, Head, injeta Header/Footer)
+│   ├── page.jsx              # Rota Principal (Fetch de listagem e Grid)
+│   ├── pokemon/
+│   │   └── [name]/
+│   │       └── page.jsx      # Rota Dinâmica (Detalhes individuais do Pokémon)
+│   └── sobre/
+│       └── page.jsx          # Rota Estática (Página Pokédex / Autor)
+├── components/
+│   ├── Footer.jsx            # Componente reutilizável de rodapé
+│   ├── Header.jsx            # Componente reutilizável de navegação e logo
+│   └── PokemonCard.jsx       # Componente isolado para os cards de listagem
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-----
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 👨‍💻 Autor
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Desenvolvido com dedicação por **[Blenda Moreira]**.
 
-## Learn More
+  - **Curso:** Sistemas para Internet
+  - **Instituição:** FAETERJ - Faculdade de Educação Tecnológica do Estado do Rio de Janeiro (Unidade Barra Mansa)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
