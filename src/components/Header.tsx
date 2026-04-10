@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <Link href="/">
           <img 
-            src="/pokemon-logo.png" 
+            src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
             alt="Logo Oficial do Pokémon" 
           />
         </Link>
